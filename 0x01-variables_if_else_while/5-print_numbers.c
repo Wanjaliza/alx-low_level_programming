@@ -1,16 +1,18 @@
 #include <stdio.h>
 /**
-* main -Entry point
-* Description - prints zero to ten
-* Return: 0 on success
-*/
+ * main - main block
+ * Description: prints all single digits of base 10 starting from 0
+ * followed by a new line
+ * Return: 0
+ */
 int main(void)
 {
-char n = 'o';
-while (n <= 10)
+int n = 0;
+while (n <= 9)
 {
-printf("%c\n", n);
+printf("%d", n);
 n++;
 }
+putchar('\n');
 return (0);
 }
