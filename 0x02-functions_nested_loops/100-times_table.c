@@ -1,49 +1,52 @@
 #include "main.h"
+
 /**
-* print_times_table - prints the n times table
-* @n : times table to use
-* Return: void
-*/
+ * print_times_table - prints times table
+ * @n : times table to use
+ * Return:void
+ */
+
 void print_times_table(int n)
 {
-int row, column, mult;
 
-if (n > 15 || n < 0)
+int row = 0, rep, column;
+
+if (n < 0 || n > 15)
 	return;
-row = 0;
+
 while (row <= n)
 {
 	for (column = 0; column <= n; column++)
-	{mult = row *column;
+	{
+		rep = row * column;
 		if (column == 0)
-		{
-			_putchar('0' + mult);
-		}
-		else if (mult < 10)
+			_putchar('0' + rep);
+		else if (rep < 10)
 		{
 			_putchar(' ');
 			_putchar(' ');
-			_putchar('0' + mult);
+			_putchar('0' + rep);
 		}
-		else if (mult < 100)
+		else if (rep < 100)
 		{
-		_putchar(' ');
-		_putchar('0' + mult / 10);
-		_putchar('0' + mult % 10);
+			_putchar(' ');
+			_putchar('0' + rep / 10);
+			_putchar('0' + rep % 10);
 		}
 		else
 		{
-			_putchar('0' + mult / 100);
-			_putchar('0' + (mult - 100) / 10);
-			_putchar('0' + mult % 10);
+			_putchar('0' + rep / 100);
+			_putchar('0' + (rep - 100) / 10);
+			_putchar('0' + rep % 10);
 		}
-		if (column < row)
+		if (column < n)
 		{
-		_putchar(',');
-		_putchar(' ');
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
 	_putchar('\n');
 	row++;
 }
 }
+
