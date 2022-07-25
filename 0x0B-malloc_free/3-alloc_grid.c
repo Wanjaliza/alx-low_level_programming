@@ -9,30 +9,30 @@
 int **alloc_grid(int width, int height)
 {
 	int num1, num2;
-	int **grid;
+	int **gridout;
 
 	if (width < 1 || height < 1)
 		return (NULL);
 
-	grid = malloc(sizeof(int *) * height);
-	if (grid == NULL)
+	gridout = malloc(sizeof(int *) * height);
+	if (gridout == NULL)
 	{
-		free(grid);
+		free(gridout);
 		return (NULL);
 	}
 	for (num1 = 0; num1 < height; num1++)
 	{
-		grid[num1] = malloc(sizeof(int) * width);
-		if (grid[num1] == NULL)
+		gridout[num1] = malloc(sizeof(int) * width);
+		if (gridout[num1] == NULL)
 		{
 			for (num1--; num1 >= 0; num1--)
-				free(grid[num1]);
-			free(grid);
+				free(gridout[num1]);
+			free(gridout);
 			return (NULL);
 		}
 	}
 	for (num1 = 0; num1 < height; num1++)
 		for (num2 = 0; num2 < width; num2++)
-			grid[num1][num2] = 0;
-	return (grid);
+			gridout[num1][num2] = 0;
+	return (gridout);
 }
