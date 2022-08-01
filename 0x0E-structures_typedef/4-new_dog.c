@@ -2,52 +2,48 @@
 #include <stdlib.h>
 
 /**
- * new_dog - function creates a new dog
- * @name: character input
- * @age: float input
- * @owner: character input
- * Return: new dog
+ * new_dog - create a new dog
+ * @name: char string name
+ * @age: int age
+ * @owner: char string owner
+ * Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int num1, num2, num3;
-	dog_t *doggy;
+	struct dog *doge;
+	int i, j, k;
+	char *n, *o;
 
-	if (name == NULL || owner == NULL)
+	doge = malloc(sizeof(struct dog));
+	if (doge == NULL)
 		return (NULL);
 
-	doggy = malloc(sizeof(dog_t));
-
-	if (doggy == NULL)
-		return (NULL);
-
-	for (num1 = 0; name[num1] != '\0'; num1++)
+	for (i = 0; name[i] != '\0'; i++)
 		;
-	doggy->name = malloc(sizeof(char) * (num1 + 1));
-
-	if (doggy->name == NULL)
-	{
-		free(doggy);
-		return (NULL);
-	}
-
-	for (num2 = 0; num2 < num1; num2++)
-		doggy->name[num2] = name[num2];
-
-	doggy->age = age;
-
-	for (num3 = 0; owner[num3] != '\0'; num3++)
+	for (j = 0; owner[j] != '\0'; j++)
 		;
 
-	doggy->owner = malloc(sizeof(char) * (num3 + 1));
-
-	if (doggy->owner == NULL)
+	n = malloc(sizeof(char) * i + 1);
+	if (n == NULL)
 	{
-		free(doggy->name);
-		free(doggy);
+		free(doge);
 		return (NULL);
 	}
-	for (num2 = 0; num2 < num3; num2++)
-		doggy->owner[num2] = owner[num2];
-	return (doggy);
+	o = malloc(sizeof(char) * j + 1);
+	if (o == NULL)
+	{
+		free(n);
+		free(doge);
+		return (NULL);
+	}
+	for (k = 0; k <= i; k++)
+		n[k] = name[k];
+	for (k = 0; k <= j; k++)
+		o[k] = owner[k];
+
+	doge->name = n;
+	doge->age = age;
+	doge->owner = o;
+
+	return (doge);
 }
