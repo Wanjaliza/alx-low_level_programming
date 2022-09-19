@@ -6,7 +6,7 @@
 * Scripts written in Bash 4.3.11(1)
 * C files are compiled using :
 
-      ``gcc 4.8.4 options -Wall -Werror -Wextra -pedantic -std=gnu89``
+      gcc 4.8.4 options -Wall -Werror -Wextra -pedantic -std=gnu89
 * C files are written according to the C90 standard
 * C files are checked using betty-style.pl and betty-doc.pl
 * Tested on Ubuntu 20.04 LTS
