@@ -36,3 +36,4 @@ All of the following folders are projects done during the studies:
 [`0x13-more_singly_linked_lists`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x13-more_singly_linked_lists) | Learning more linked lists in C language |
 [`0x14-bit_manipulation`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x14-bit_manipulation) | Learning algorithmically manipulating bits or other pieces of data shorter than a word |
 [`0x15-file_io`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x15-file_io) | Learning file management in C |
+[`0x17-doubly_linked_lists`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x17-doubly_linked_lists) | Learning Data Structuresin C - Doubly Linked Lists |
