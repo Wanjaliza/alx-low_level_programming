@@ -3,13 +3,13 @@
 
 
 # Technologies
-* Scripts written in Bash 4.3.11(1)
+* Scripts written in **Bash 4.3.11 (1)**
 * C files are compiled using :
 
       gcc 4.8.4 options -Wall -Werror -Wextra -pedantic -std=gnu89
-* C files are written according to the C90 standard
-* C files are checked using betty-style.pl and betty-doc.pl
-* Tested on Ubuntu 20.04 LTS
+* C files are written according to the **C90 standard**
+* C files are checked using **betty-style.pl** and **betty-doc.pl**
+* Tested on Ubuntu 20.04 LTS, Ubuntu 16.04.
 
 # Projects
 All of the following folders are projects done during the studies:
@@ -37,3 +37,4 @@ All of the following folders are projects done during the studies:
 [`0x14-bit_manipulation`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x14-bit_manipulation) | Learning algorithmically manipulating bits or other pieces of data shorter than a word |
 [`0x15-file_io`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x15-file_io) | Learning file management in C |
 [`0x17-doubly_linked_lists`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x17-doubly_linked_lists) | Learning Data Structuresin C - Doubly Linked Lists |
+[`0x18-dynamic_libraries`](https://github.com/iankisali/alx-low_level_programming/tree/master/0x18-dynamic_libraries) | Learning dynamic library, how does it work, how to create one, and how to use it as well as differences between static and shared libraries. |
